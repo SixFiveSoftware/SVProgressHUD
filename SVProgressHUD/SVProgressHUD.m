@@ -186,9 +186,17 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
     [self showInfoWithStatus:string maskType:SVProgressHUDDefaultMaskType];
 }
 
++ (void)showInfoWithStatus:(NSString *)string fromView:(UIView *)aView {
+    [self showImage:SVProgressHUDInfoImage status:string maskType:SVProgressHUDDefaultMaskType fromView:aView];
+}
+
 + (void)showInfoWithStatus:(NSString *)string maskType:(SVProgressHUDMaskType)maskType {
     [self sharedView];
     [self showImage:SVProgressHUDInfoImage status:string maskType:maskType];
+}
+
++ (void)showInfoWithStatus:(NSString *)string maskType:(SVProgressHUDMaskType)maskType fromView:(UIView *)aView {
+    [self showImage:SVProgressHUDInfoImage status:string maskType:maskType fromView:aView];
 }
 
 + (void)showSuccessWithStatus:(NSString *)string {

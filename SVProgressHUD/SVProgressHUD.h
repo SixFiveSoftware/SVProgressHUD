@@ -56,7 +56,9 @@ typedef NS_ENUM(NSUInteger, SVProgressHUDMaskType) {
 
 // stops the activity indicator, shows a glyph + status, and dismisses HUD a little bit later
 + (void)showInfoWithStatus:(NSString *)string;
++ (void)showInfoWithStatus:(NSString *)string fromView:(UIView *)aView;
 + (void)showInfoWithStatus:(NSString *)string maskType:(SVProgressHUDMaskType)maskType;
++ (void)showInfoWithStatus:(NSString *)string maskType:(SVProgressHUDMaskType)maskType fromView:(UIView *)aView;
 
 + (void)showSuccessWithStatus:(NSString*)string;
 + (void)showSuccessWithStatus:(NSString*)string maskType:(SVProgressHUDMaskType)maskType;
